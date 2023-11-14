@@ -20,48 +20,17 @@ python train.py --experiment_dir=experiment --batch_size=160 --lr=0.001 --epoch=
 
 python infer.py --experiment_dir experiment --batch_size 100 --gpu_ids cuda:0 --obj_path './experiment/data/val/val.obj' --resume 1700
 
-A zi2zi pytorch implement based on [zi2zi-pytorch](https://github.com/xuan-li/zi2zi-pytorch). Fix some bugs so it can have the same network and performance as the [zi2zi](https://github.com/kaonashi-tyc/zi2zi). Also, integrate some improvement from [Font2font](https://github.com/jasonlo0509/Font2Font).
-
-
-
-![新楷体——行書-王壯為](results/新楷体——行書-王壯為.png)
-
-新楷体——行書-王壯為
-
-"**諸**" is not very good.
-
-
-![新楷体——隸書-何紹基](results/新楷体——隸書-何紹基.png)
-
-新楷体——隸書-何紹基
-
-
-
-![新楷体——隸書-趙之謙](results/新楷体——隸書-趙之謙.png)
-
-新楷体——隸書-趙之謙
-
-
-
-![新楷体——美工-瘦顏體](results/新楷体——美工-瘦顏體.png)
-
-新楷体——美工-瘦顏體
-
 ## How to Use
-### Step Zero
-Download tons of fonts as you please
 ### Requirement
-
-We use the environment below:
-
-* Python 3.7
-* CUDA 10.2
-* cudnn 7.6.5
-* pytorch 1.5.1
-* pillow 7.1.2
-* numpy 1.18.1
-* scipy 1.4.1
-* imageio 2.8.0
+I use the environment below:
+* Python 3.8
+* CUDA 11.8
+* cudnn 8.9.5
+* pytorch 2.0.0
+* pillow 
+* numpy 
+* scipy 
+* imageio 
 
 ### Preprocess
 To avoid IO bottleneck, preprocessing is necessary to pickle your data into binary and persist in memory during training.
