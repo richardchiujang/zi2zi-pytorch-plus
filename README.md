@@ -7,13 +7,13 @@
 
 # zi2zi_tensorflow 
 ## 使用指定的字型與自己的手寫字型產生樣本，做成experiment\data裡的pickle資料檔 
-python font2img.py --src_font=font/GenYoGothicTW-EL-01.ttf --dst_font=font/111C51528.ttf --charset=TWTrain --sample_count=1000 --sample_dir=image_train --label=1 --filter=1 --shuffle=1
-python font2img.py --src_font=font/GenYoGothicTW-EL-01.ttf --dst_font=font/111C51528.ttf --charset=TWVal --sample_count=4080 --sample_dir=image_val --label=1 --filter=1 --shuffle=0
-python package.py --dir=image_train --save_dir=experiment/data --split_ratio=0.1
-python package.py --dir=image_val --save_dir=experiment/data/val --split_ratio=1
+### python font2img.py --src_font=font/GenYoGothicTW-EL-01.ttf --dst_font=font/111C51528.ttf --charset=TWTrain --sample_count=1000 --sample_dir=image_train --label=1 --filter=1 --shuffle=1
+### python font2img.py --src_font=font/GenYoGothicTW-EL-01.ttf --dst_font=font/111C51528.ttf --charset=TWVal --sample_count=4080 --sample_dir=image_val --label=1 --filter=1 --shuffle=0
+### python package.py --dir=image_train --save_dir=experiment/data --split_ratio=0.1
+### python package.py --dir=image_val --save_dir=experiment/data/val --split_ratio=1
 # zi2zi-pytorch 訓練模型
-python train.py --experiment_dir=experiment --batch_size=160 --lr=0.001 --epoch=500 --sample_steps=50 --schedule=20 --L1_penalty=100 --Lconst_penalty=15 --resume 600
-python infer.py --experiment_dir experiment --batch_size 100 --gpu_ids cuda:0 --obj_path './experiment/data/val/val.obj' --resume 1700
+### python train.py --experiment_dir=experiment --batch_size=160 --lr=0.001 --epoch=500 --sample_steps=50 --schedule=20 --L1_penalty=100 --Lconst_penalty=15 --resume 600
+### python infer.py --experiment_dir experiment --batch_size 100 --gpu_ids cuda:0 --obj_path './experiment/data/val/val.obj' --resume 1700
 
 A zi2zi pytorch implement based on [zi2zi-pytorch](https://github.com/xuan-li/zi2zi-pytorch). Fix some bugs so it can have the same network and performance as the [zi2zi](https://github.com/kaonashi-tyc/zi2zi). Also, integrate some improvement from [Font2font](https://github.com/jasonlo0509/Font2Font).
 
