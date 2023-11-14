@@ -5,7 +5,8 @@
 再用這裡的檔案覆蓋
 將 https://github.com/chiaoooo/zi2zi_tensorflow 處理到產生 experiment\data 時，COPY過去後訓練  
 
-# zi2zi_tensorflow 使用指定的字型與自己的手寫字型產生樣本，做成experiment\data裡的pickle資料檔 
+# zi2zi_tensorflow 
+## 使用指定的字型與自己的手寫字型產生樣本，做成experiment\data裡的pickle資料檔 
 python font2img.py --src_font=font/GenYoGothicTW-EL-01.ttf --dst_font=font/111C51528.ttf --charset=TWTrain --sample_count=1000 --sample_dir=image_train --label=1 --filter=1 --shuffle=1
 python font2img.py --src_font=font/GenYoGothicTW-EL-01.ttf --dst_font=font/111C51528.ttf --charset=TWVal --sample_count=4080 --sample_dir=image_val --label=1 --filter=1 --shuffle=0
 python package.py --dir=image_train --save_dir=experiment/data --split_ratio=0.1
