@@ -2,6 +2,7 @@
 
 2023/11/12 使用方法 
 將 https://github.com/EuphoriaYan/zi2zi-pytorch 複製過來使用
+
 再用這裡的檔案覆蓋
 將 https://github.com/chiaoooo/zi2zi_tensorflow 處理到產生 experiment\data 時，COPY過去後訓練  
 
